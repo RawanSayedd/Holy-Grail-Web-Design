@@ -1,0 +1,286 @@
+/* Shared CSS */
+html {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*******************************/
+/* CSS OUTER GRID STYLES */
+.outer-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 90px 1fr;
+  grid-template-areas:
+    "alias-header alias-header"
+    "alias-innergrid alias-innergrid";
+}
+
+/* TOGGLING THE NAVIGATION BAR */
+.outer-grid-expanded {
+  grid-template-areas:
+    "alias-header alias-header"
+    "alias-nav alias-innergrid";
+}
+.hide-nav {
+  display: none;
+}
+/*******************************/
+header {
+  grid-area: alias-header;
+  color: #71d99e;
+  background-color: #1e4040;
+}
+nav {
+  grid-area: alias-nav;
+  background-color: white;
+
+  /* width: 50px;
+  height: 50px; */
+}
+/**************************/
+/* CSS INNER GRID STYLES */
+.inner-container {
+  overflow-y: scroll;
+  /* to get rid of the horizontal scroll and fix the header during scrolling */
+  grid-area: alias-innergrid;
+  background-color: rgba(0, 31, 255, 0.2);
+  display: grid;
+
+  grid-template-rows: 1fr auto 60px;
+  grid-template-columns: 1fr;
+
+  grid-template-areas:
+    "alias-main alias-main"
+    "alias-side alias-side"
+    "alias-footer alias-footer";
+}
+main {
+  grid-area: alias-main;
+  background-color: white;
+  height: 1100px;
+  color: #1e4040;
+  padding: 10px;
+}
+aside {
+  grid-area: alias-side;
+  background-color: white;
+  border-left: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+  /* height: 100px; */
+}
+footer {
+  grid-area: alias-footer;
+  background-color: #1e4040;
+}
+
+/************************************/
+/************HEADER STYLE***********/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-header {
+  display: flex;
+  align-items: center;
+}
+.fa-bars,
+h2 {
+  margin-left: 20px;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: row;
+}
+.video,
+.article {
+  margin-left: 10px;
+}
+.article {
+  padding-right: 20px;
+}
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a {
+  color: #71d99e;
+}
+/******STYLING THE BAR ICON******/
+.fa-bars:hover {
+  cursor: pointer;
+}
+/************************************/
+/********NAVIGATION BAR STYLING******/
+nav {
+  color: #1e4040;
+  border-right: 1px solid #d2d2d2;
+  display: flex;
+  flex-direction: column;
+}
+.home-icon-container,
+.profile-icon-container,
+.billing-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.home-icon-container a,
+.profile-icon-container a,
+.billing-icon-container a {
+  color: #255954;
+  text-decoration: none;
+}
+/*********MAIN BODY ARTICLE*****/
+h3 {
+  margin-top: 20px;
+}
+ul {
+  margin: 20px;
+}
+ul a {
+  text-decoration: none;
+  color: #255954;
+}
+.check-container {
+  display: flex;
+  flex-direction: row;
+}
+.check-container p {
+  margin-left: 5px;
+}
+
+/*********SIDE BAR STYLING******/
+aside {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside img {
+  width: 250px;
+  border-radius: 10px;
+}
+.vodafone-container {
+  margin-bottom: 10px;
+}
+.vodafone-container,
+.huawei-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/*********COLLAGE***********/
+.collage {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr;
+  height: 550px;
+  align-items: center;
+  margin-left: 20px;
+}
+img {
+  border-radius: 20px;
+}
+img .collage-1 {
+  width: 300px;
+  height: 400px;
+}
+.collage-1,
+.collage-2,
+.collage-3 {
+  grid-row: 1/2;
+}
+
+.collage-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 1;
+  transform: rotate(-3deg);
+  box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.collage-2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  z-index: 2;
+  box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.collage-3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  z-index: 1;
+  transform: rotate(3deg);
+  box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
+}
+img .collage-2 {
+  width: 200px;
+  height: 500px;
+}
+img .collage-3 {
+  width: 300px;
+  height: 400px;
+}
+/*****************************/
+/*******STYLING FOOTER*********/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-main {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-main p {
+  margin-right: 5px;
+}
+/*************************/
+/* MOBILE-FIRST APPROACH (BREAKING POINTS) */
+@media (min-width: 576px) {
+  .outer-container {
+    grid-template-areas:
+      "alias-header alias-header"
+      "alias-nav alias-innergrid";
+  }
+  .outer-container nav {
+    display: block;
+  }
+  .fa-bars {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .inner-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 800px) 1fr;
+    grid-template-rows: 1fr 60px;
+    grid-template-areas:
+      "alias-main alias-side"
+      "alias-footer alias-footer";
+  }
+}
+@media (min-width: 1440px) {
+}
