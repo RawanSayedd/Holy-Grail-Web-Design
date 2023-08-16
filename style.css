@@ -63,7 +63,7 @@ nav {
 main {
   grid-area: alias-main;
   background-color: white;
-  height: 1100px;
+  height: 1000px;
   color: #1e4040;
   padding: 10px;
 }
@@ -162,6 +162,7 @@ ul a {
 .check-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 .check-container p {
   margin-left: 5px;
