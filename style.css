@@ -86,6 +86,9 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+header h2 {
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
 .left-header {
   display: flex;
   align-items: center;
@@ -177,6 +180,10 @@ ul a {
 }
 .skills-2 {
   margin-right: 30px;
+  margin-left: 30px;
+}
+.skills-3 {
+  margin-left: 25px;
 }
 /*********SIDE BAR STYLING******/
 aside {
