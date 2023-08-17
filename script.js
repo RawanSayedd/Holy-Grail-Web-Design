@@ -31,7 +31,7 @@ function type() {
   if (i < text.length) {
     typedText.innerHTML += text[i];
     i++;
-    setTimeout(type, 150);
+    setTimeout(type, 200);
   }
 }
 type();
